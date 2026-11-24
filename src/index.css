@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-editorial: "Cormorant Garamond", "Noto Serif TC", Georgia, serif;
+  --font-sans-body: "Plus Jakarta Sans", "Noto Sans TC", system-ui, -apple-system, sans-serif;
+  --font-mono-code: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans-body);
+    background-color: #090d0b;
+    color: #f5f1e8;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif-editorial);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono-code);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
